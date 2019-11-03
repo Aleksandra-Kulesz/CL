@@ -1,0 +1,111 @@
+.contact {
+  padding: 3rem;
+  width: 100%;
+
+  .contact__info__h2 {
+    @include h2;
+    text-align: left;
+  }
+
+  .contact__info__p {
+    margin: 1rem 0;
+    font-size: 1.6rem;
+    text-align: left;
+  }
+
+  .contact__info__bSContact {
+    margin: 3rem 0;
+
+    span {
+      color: $bSblue;
+      margin-right: 1rem;
+    }
+
+    p {
+      color: $bSgrayA5;
+      font-weight: 500;
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .contact__form {
+    .labelBlue {
+      text-transform: uppercase;
+      color: $bSblue;
+      font-size: 1.1rem;
+      font-weight: bold;
+
+      [type=text], [type=email] {
+        display: block;
+        margin: 1rem 0;
+        border: transparent;
+        border-bottom: 1px solid $bSgray-70;
+        width: 100%;
+      }
+    }
+
+    .agreement {
+      margin-top: 1rem;
+      color: $bSgray-70;
+      font-size: 1.2rem;
+      display: inline-block;
+      text-align: justify;
+
+      input[type="checkbox"] {
+        @include checkbox;
+      }
+    }
+
+    [type='submit'] {
+      @include btn($bSblue);
+      display: block;
+      float: right;
+      margin: 2rem 0 5rem 0;
+
+      &::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+    }
+  }
+}
+
+@media (min-width: 720px) and (max-width: 999px) {
+  .contact {
+    margin: 7rem auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .contact__form {
+      width: 50%;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .contact {
+    margin: 7rem auto;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .contact__info {
+      .contact__info__bSContact {
+        display: flex;
+
+        p {
+          margin-right: 1.5rem;
+        }
+      }
+    }
+
+    .contact__form {
+      width: 50%;
+    }
+  }
+}

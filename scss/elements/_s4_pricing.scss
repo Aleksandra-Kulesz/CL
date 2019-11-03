@@ -1,0 +1,113 @@
+.pricing {
+  width: 100%;
+  padding: 2rem;
+
+  .pricing__h2 {
+    @include h2;
+  }
+
+  .pricing__offer__wrapper:first-of-type {
+    .pricing__offer {
+      @include pricing__offer($bSpink)
+    }
+
+    .pricing__offer__btn1 {
+      @include btnSmall($bSpink);
+    }
+  }
+
+  .pricing__offer__wrapper:nth-of-type(2) {
+    .pricing__offer {
+      @include pricing__offer($bSblue);
+      width: 100%;
+      -webkit-box-shadow: 0 0 20px 3px rgba(26, 152, 234, 0.2);
+      -moz-box-shadow: 0 0 20px 3px rgba(26, 152, 234, 0.2);
+      box-shadow: 0 0 20px 3px rgba(26, 152, 234, 0.2);
+    }
+
+    .pricing__offer__btn2 {
+      @include btnSmall($bSblue);
+      -webkit-box-shadow: 0 10px 15px 2px rgba(8, 166, 228, 0.4);
+      -moz-box-shadow: 0 10px 15px 2px rgba(8, 166, 228, 0.4);
+      box-shadow: 0 10px 15px 2px rgba(8, 166, 228, 0.4);
+    }
+  }
+
+  .pricing__offer:last-of-type {
+    @include pricing__offer($bSgreen)
+  }
+
+  .pricing__offer__btn3 {
+    @include btnSmall($bSgreen);
+  }
+}
+
+@media (min-width: 720px) and (max-width: 999px) {
+.pricing__content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+  .pricing__offer__wrapper{
+    width: 45vw;
+    padding: 2rem;
+  }
+  .pricing__offer__wrapper:nth-of-type(2){
+    order: -1;
+    width: 60vw;
+  }
+  .pricing__offer__wrapper:last-of-type{
+    .pricing__offer__options {
+      padding: .2rem 0;
+    }
+  }
+}
+};
+
+@media (min-width: 1000px) {
+  .pricing {
+    h2 {
+      margin: 4rem;
+    }
+
+    .pricing__content {
+      display: flex;
+      justify-content: space-around;
+
+      .pricing__offer__wrapper {
+        width: 30%;
+
+        .pricing__offer {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          height: 90%;
+          margin-top: 5%;
+
+          .pricing__offer__costs {
+            margin-top: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+          }
+
+          .pricing__offer__options {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+          }
+        }
+      }
+
+      .pricing__offer__wrapper:nth-of-type(2) {
+        .pricing__offer {
+          height: 100%;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
