@@ -38,13 +38,13 @@ linksArr.forEach(function (elem) {
                 return -c / 2 * (t * (t - 2) - 1) + b;
             }
 
-            requestAnimationFrame(animation)
+            requestAnimationFrame(animation);
         }
 
         smoothScroll(1000);
     })
 
-})
+});
 
 
 // Calculator
@@ -91,6 +91,8 @@ quantityInput.addEventListener('change', function (e) {
     } else {
         quantityInput.value = '';
         quantityInput.setAttribute('placeholder', 'Value has to be an integer');
+        quantitySum.innerText = "$0";
+        quantityDes.innerText = "";
     }
 });
 
@@ -107,6 +109,8 @@ ordersInput.addEventListener('change', function (e) {
     } else {
         ordersInput.value = '';
         ordersInput.setAttribute('placeholder', 'Value has to be an integer');
+        ordersSum.innerText = "$0";
+        ordersDes.innerText = "";
     }
 });
 
