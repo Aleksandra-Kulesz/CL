@@ -88,6 +88,12 @@ quantityInput.addEventListener('change', function (e) {
         s1 = quantityInput.value * 0.5;
         summary = s1 + s2 + s3 + s4 + s5;
         sum.innerText = '$' + summary;
+    } else if(quantityInput.value === ''){
+        s1 = 0;
+        summary = s1 + s2 + s3 + s4 + s5;
+        sum.innerText = '$' + summary;
+        quantitySum.innerText = "$0";
+        quantityDes.innerText = "";
     } else {
         quantityInput.value = '';
         quantityInput.setAttribute('placeholder', 'Value has to be an integer');
@@ -106,11 +112,15 @@ ordersInput.addEventListener('change', function (e) {
         s2 = ordersInput.value * 0.25;
         summary = s1 + s2 + s3 + s4 + s5;
         sum.innerText = '$' + summary;
+    } else if(ordersInput.value === ''){
+        s2 = 0;
+        summary = s1 + s2 + s3 + s4 + s5;
+        sum.innerText = '$' + summary;
+        ordersSum.innerText = "$0";
+        ordersDes.innerText = "";
     } else {
         ordersInput.value = '';
         ordersInput.setAttribute('placeholder', 'Value has to be an integer');
-        ordersSum.innerText = "$0";
-        ordersDes.innerText = "";
     }
 });
 
