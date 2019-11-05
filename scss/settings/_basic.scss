@@ -10,10 +10,14 @@ body {
   font-family: 'Open Sans', sans-serif;
   width: 100vw;
   overflow-x: hidden;
+  .site__wrapper{
+    width: 100%;
+  }
   @media (min-width: 1352px) {
   .site__wrapper {
     max-width: 1352px;
     margin: 0 auto;
+    border: .1rem solid #dddddd;
   }
   }
 }

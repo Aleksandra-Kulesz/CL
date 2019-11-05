@@ -39,9 +39,9 @@
   font-size: 1.6rem;
   padding: 2rem 9rem;
   margin-bottom: 1rem;
-  -webkit-box-shadow: 0 10px 15px 2px rgba(8,166,228,0.4);
-  -moz-box-shadow: 0 10px 15px 2px rgba(8,166,228,0.4);
-  box-shadow: 0 10px 15px 2px rgba(8,166,228,0.4);
+  -webkit-box-shadow: 0 10px 15px 2px rgba(8, 166, 228, 0.4);
+  -moz-box-shadow: 0 10px 15px 2px rgba(8, 166, 228, 0.4);
+  box-shadow: 0 10px 15px 2px rgba(8, 166, 228, 0.4);
   cursor: pointer;
 }
 
@@ -56,6 +56,8 @@
   margin: 0 auto;
   transform: translateY(-75%);
   cursor: pointer;
+  text-align: center;
+  max-width: 50%;
 }
 
 @mixin pricing__offer($color) {
@@ -67,17 +69,24 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  .pricing__offer__costs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h4 {
+      @include h4;
+    }
 
-  h4 {
-    @include h4;
-  }
-  p {
-    font-size: 4.6rem;
-    color: $color;
-    font-weight: 300;
-  }
-  h5 {
-    @include h5;
+    p {
+      font-size: 4.6rem;
+      color: $color;
+      font-weight: 300;
+    }
+
+    h5 {
+      @include h5;
+    }
   }
   .pricing__offer__options {
     span.far {

@@ -35,6 +35,7 @@
       color: $bSblue;
       font-size: 1.1rem;
       font-weight: bold;
+      letter-spacing: 1px;
 
       [type=text], [type=email] {
         display: block;
@@ -46,16 +47,26 @@
     }
 
     .agreement {
-      margin-top: 1rem;
-      color: $bSgray-70;
-      font-size: 1.2rem;
-      display: inline-block;
-      text-align: justify;
-
       input[type="checkbox"] {
         @include checkbox;
       }
+      span{
+        float: right;
+        display: block;
+        text-align: justify;
+        width: calc(100% - 3rem);
+        font-size: 1.2rem;
+        color: $bSgray-70;
+        margin-top: 1rem;
+        &::after{
+          content: '';
+          clear: both;
+          display: block;
+        }
+      }
     }
+
+
 
     [type='submit'] {
       @include btn($bSblue);

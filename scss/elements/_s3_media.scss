@@ -11,26 +11,31 @@
     justify-content: space-between;
     align-items: center;
     margin: 2rem;
-    position: relative;
 
-    .box__img1 {
-      margin-left: 25%;
-      height: 15rem;
-      width: 15rem;
-      border-radius: 4.1rem;
-      background-color: $bSpink;
-      transform: rotate(-45deg);
-      position: absolute;
-      top: 5%;
-      left: 15%;
-    }
-    .box__image {
-      height: 20vh;
-      width: 30rem;
-      background-image: url("../assets/Macbook.png");
-      background-repeat: no-repeat;
-      background-size: contain;
-      z-index: 2;
+    .box__img__wrapper {
+      margin: 0 auto;
+      width: 20rem;
+      height: 20rem;
+      position: relative;
+
+
+      .box__img1 {
+        width: 125%;
+        margin: 50% 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .box__image {
+        height: 15rem;
+        width: 15rem;
+        border-radius: 4.1rem;
+        background-color: $bSpink;
+        position: absolute;
+        top: -5%;
+        right: -15%;
+        transform: rotate(45deg);
+
+      }
     }
 
     .box__img2 {
@@ -50,61 +55,69 @@
     .media__box__megaphone {
       background-color: $bSgreen;
       background-image: url("../assets/Trumpet.png");
-      background-size: contain;
-      background-position: center;
+      background-size: 50%;
+      background-position: 50%;
       background-repeat: no-repeat;
       border-radius: .5rem;
       height: 30vh;
       width: 100%;
     }
 
-    .box__content__h3 {
-      @include h3;
-      padding: 2rem;
-    }
+    .box__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
 
-    .box__content__p {
-      font-family: 'Open Sans', sans-serif;
-      font-size: 1.4rem;
-      padding: 2rem;
+      .box__content__h3 {
+        @include h3;
+        padding: 2rem;
+      }
+
+      .box__content__p {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.4rem;
+        padding: 2rem;
+      }
     }
   }
 
   .media__box:first-of-type {
     padding-top: 5rem;
   }
-
 }
 
 @media (min-width: 720px) and (max-width: 999px) {
-.media {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  .media__box {
-    width: 40vw;
-    height: 70vh;
-  }
-  .media__box:last-of-type {
-    background-color: transparent;
+  .media {
     display: flex;
-    flex-direction: row;
-    width: 90vw;
-    height: 35vh;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
 
-    .box__content {
-      background-color: white;
-      width: 55%;
-      height: 100%;
+    .media__box {
+      width: 40vw;
+      height: 70vh;
     }
 
-    .media__box__megaphone {
-      width: 40%;
-      height: 100%;
+    .media__box:last-of-type {
+      background-color: transparent;
+      display: flex;
+      flex-direction: row;
+      width: 90vw;
+      height: 35vh;
+
+      .box__content {
+        background-color: white;
+        width: 55%;
+        height: 100%;
+        border-radius: .6rem;
+      }
+
+      .media__box__megaphone {
+        width: 40%;
+        height: 100%;
+      }
     }
   }
-}
 }
 
 @media (min-width: 1000px) {
@@ -121,16 +134,28 @@
 
       .box__content {
         width: 50%;
-        padding-bottom: 5rem;
+        padding: 2rem;
+
+        .box__content__line {
+          height: .4rem;
+          width: 70%;
+          background-color: $bSpink;
+          margin: 2rem;
+        }
       }
     }
 
     .media__box:first-of-type {
       flex-direction: row-reverse;
-      padding: 0 5rem;
-      .box__img1 {
-        top: 12%;
-        left: 45%;
+      padding: 2rem;
+      .box__img__wrapper{
+        margin-top: 2rem;
+      }
+    }
+
+    .media__box:nth-of-type(2) {
+      .box__content__line {
+        background-color: $bSblue;
       }
     }
 
@@ -142,6 +167,12 @@
       .box__content {
         background-color: white;
         width: 55%;
+        border-radius: .6rem;
+        padding: 2rem;
+
+        .box__content__line {
+          background-color: $bSgreen;
+        }
       }
 
       .media__box__megaphone {

@@ -16,9 +16,9 @@
 
 <body>
 <div class="site__wrapper">
-<!------------------------------------------       HEADER     ------------------------------------------------------------------->
+    <!------------------------------------------       HEADER     ------------------------------------------------------------------->
     <header class="header">
-        <a  href="index.html" class="header__logo">BestShop</a>
+        <a href="index.html" class="header__logo">BestShop</a>
         <div class="hamburger__box">
             <button class="hamburger" id="hamburger"></button>
         </div>
@@ -44,7 +44,7 @@
         <div class="hero__content">
             <h2 class="hero__content__h2">Sell More!</h2>
             <p class="hero__content__p">Open shop on our platform and increase your sales</p>
-            <button class="btn hero__content__button">Open your shop</button>
+            <a class="btn hero__content__button">Open your shop</a>
         </div>
         <div class="hero__img"></div>
     </section>
@@ -83,15 +83,19 @@
     <!---------------------------------------------  SECTION 3 - MEDIA  ------------------------------------------------------------>
 
     <section class="media" id="media">
+
         <div class="media__box">
-            <div class="box__img1"></div>
-            <div class="box__image"></div>
+            <div class="box__img__wrapper">
+                <div class="box__image"></div>
+                <img alt="Macbook" class="box__img1" src="assets/Macbook.png"/>
+            </div>
             <div class="box__content">
                 <h3 class="box__content__h3">Be always first</h3>
                 <p class="box__content__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                     tempor incididunt ut labore et
                     dolore
                     magna aliqua. Ut enim ad minim veniam.</p>
+                <div class="box__content__line"></div>
             </div>
         </div>
 
@@ -103,6 +107,7 @@
                     tempor incididunt ut labore et
                     dolore
                     magna aliqua. Ut enim ad minim veniam.</p>
+                <div class="box__content__line"></div>
             </div>
         </div>
 
@@ -113,6 +118,7 @@
                     tempor incididunt ut labore et
                     dolore
                     magna aliqua. Ut enim ad minim veniam.</p>
+                <div class="box__content__line"></div>
             </div>
             <div class="media__box__megaphone"></div>
         </div>
@@ -138,7 +144,7 @@
                         <p><span class="close"></span>Full support</p>
                     </div>
                 </div>
-                <button class="pricing__offer__btn1">Begin</button>
+                <a class="pricing__offer__btn1">Begin</a>
             </div>
 
             <div class="pricing__offer__wrapper">
@@ -156,7 +162,7 @@
                         <p><span class="close"></span>Full support</p>
                     </div>
                 </div>
-                <button class="pricing__offer__btn2">Begin</button>
+                <a class="pricing__offer__btn2">Begin</a>
             </div>
 
             <div class="pricing__offer__wrapper">
@@ -174,7 +180,7 @@
                         <p><span class="far fa-check-square"></span>Full support</p>
                     </div>
                 </div>
-                <button class="pricing__offer__btn3">Begin</button>
+                <a class="pricing__offer__btn3">Begin</a>
             </div>
         </div>
     </section>
@@ -239,6 +245,7 @@
                 <p><span class="fas fa-phone"></span>123 456 789</p>
             </div>
         </div>
+
         <form class="contact__form">
             <label class="labelBlue"> name
                 <input type="text">
@@ -247,14 +254,15 @@
                 <input type="email">
             </label>
             <label for="agreement" class="agreement">
-                <input id="agreement" type="checkbox">
-                I hereby give consent for my personal data included in my application to be processed for the purposes
+            <input id="agreement" type="checkbox">
+                <span>I hereby give consent for my personal data included in my application to be processed for the purposes
                 of
                 the recruitment process under the European Parliament’s and Council of the European Union Regulation on
                 the
                 Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on
                 the
                 free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)
+                </span>
             </label>
             <input type="submit" value="Send">
         </form>
